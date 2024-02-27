@@ -1,0 +1,13 @@
+parent(john, mary).
+parent(sarah, emily).
+parent(michael, david).
+parent(elizabeth, christopher).
+parent(william, katherine).
+parent(charles, alexander).
+parent(margaret, anne).
+parent(daniel, jessica).
+parent(andrew, hannah).
+parent(matthew, sarah).
+father(X,Y):-parent(X,Y),male(X).
+mother(X,Y):-parent(X,Y),female(X).
+brother(X,Y):-parent(Z,X),parent(Z,Y),male(X).
